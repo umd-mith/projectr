@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>projectr</title>
+    <style>
+      body {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 10px;
+        font-size: 18pt;
+      }
+      input {
+        font-size: 18pt;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      form {
+        padding: 25px;
+        background-color: ccc;
+        width: 80%;
+        border: solid thin #ccc;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>projectr</h1>
+      <hr>
+    </header>
+
+    <p><em>projectr</em> lets you upload a graph edge list as a two column CSV file and get back a <a href="https://en.wikipedia.org/wiki/Bipartite_network_projection">weighted bipartite projection</a> of that graph as a CSV.</p>
+
+    <form action="/" enctype="multipart/form-data" method="post"> <input
+      onchange="this.form.submit()" name="file" type="file">
+    </form>
+
+  </body>
+</html>
