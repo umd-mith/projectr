@@ -5,8 +5,6 @@ REST API call:
 
 <img src="https://c1.staticflickr.com/3/2930/34063566851_8ae7b9240e_b.jpg">
 
-     curl -F file=@/path/to/file.csv http://projectr.example.com/ 
-
 ## Install
 
 The easiest way to get started with *projectr* is with [Docker]:
