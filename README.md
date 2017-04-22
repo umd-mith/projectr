@@ -10,7 +10,7 @@ REST API call:
 The easiest way to get started with *projectr* is with [Docker]:
 
     docker run -d -p 8080:5000 edsu/projectr
-    open http://localhost:5000
+    open http://localhost:8080
 
 Or if you want to run it so you can hack on it:
 
