@@ -1,4 +1,4 @@
-projectr is a little microservice lets you upload a graph edge list as a two
+*projectr* is a microservice that lets you upload a graph edge list as a two
 column CSV file and get back a weighted bipartite projection of that graph as a
 CSV. You can either interact with projectr in your browser or as an API, e.g.
 
@@ -6,12 +6,12 @@ CSV. You can either interact with projectr in your browser or as an API, e.g.
 
 <img src="https://c1.staticflickr.com/3/2930/34063566851_8ae7b9240e_b.jpg">
 
-The easiest way to run projectr is with [Docker]:
+The easiest way to get started with projectr is with [Docker]:
 
     docker run -d -p 5000:5000 edsu/projectr
     open http://localhost:5000
 
-If you want to run it for development:
+Or if you want to run it for development:
 
     git clone https://github.com/umd-mith/projectr
     cd projectr
@@ -21,4 +21,3 @@ If you want to run it for development:
     flask run
 
 [Docker]: https://docs.docker.com/engine/installation/
-
