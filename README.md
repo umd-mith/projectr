@@ -1,8 +1,10 @@
 projectr is a little microservice lets you upload a graph edge list as a two
 column CSV file and get back a weighted bipartite projection of that graph as a
-CSV.
+CSV. You can either interact with projectr in your browser or as an API, e.g.
 
-# Run
+     curl -F file=@/path/to/file.csv http://projectr.example.com/ 
+
+<img src="https://c1.staticflickr.com/3/2930/34063566851_8ae7b9240e_b.jpg">
 
 The easiest way to run projectr is with [Docker]:
 

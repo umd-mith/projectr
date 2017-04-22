@@ -14,13 +14,16 @@ app = flask.Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index():
     if flask.request.method == "POST":
+        col = int(flask.request.form.get('column', 1))
         input_csv = flask.request.files['file']
         tmp = tempfile.NamedTemporaryFile(delete=False)
         input_csv.save(tmp.name)
-        return flask.Response(project(tmp.name), mimetype="text/csv")
+        return flask.Response(project(tmp.name, col), mimetype="text/csv")
     return flask.render_template("index.html")
 
-def project(input_path):
+
+def project(input_path, col=1):
+    print(col)
 
     # create the graph
     with open(input_path) as fh:
@@ -28,7 +31,7 @@ def project(input_path):
         g = networkx.Graph()
         onto_nodes = set()
         for row in csv_reader:
-            onto_nodes.add(row[1])
+            onto_nodes.add(row[col-1])
             g.add_edge(row[0], row[1])
 
     # project the graph onto the nodes

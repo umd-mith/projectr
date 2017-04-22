@@ -1,0 +1,42 @@
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 10px;
+  font-size: 16pt;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+input,select {
+  font-size: 16pt;
+  margin: 2px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#upload {
+  padding: 15px;
+  background-color: #ffdae9;
+  border-radius: 10px;
+}
+
+#curl {
+  background-color: black;
+  color: #00ff00; 
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#forkme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+

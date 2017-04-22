@@ -1,30 +1,10 @@
 <html>
+
   <head>
     <title>projectr</title>
-    <style>
-      body {
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-top: 10px;
-        font-size: 18pt;
-      }
-      input {
-        font-size: 18pt;
-      }
-      header {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-      form {
-        padding: 25px;
-        background-color: ccc;
-        width: 80%;
-        border: solid thin #ccc;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
+
   <body>
 
     <header>
@@ -32,11 +12,33 @@
       <hr>
     </header>
 
-    <p><em>projectr</em> lets you upload a graph edge list as a two column CSV file and get back a <a href="https://en.wikipedia.org/wiki/Bipartite_network_projection">weighted bipartite projection</a> of that graph as a CSV.</p>
+    <a href="https://githum.com/umd-mith/projectr">
+      <img id="forkme" src="{{ url_for('static', filename='images/forkme.png') }}" alt="Fork me on GitHub">
+    </a>
 
-    <form action="/" enctype="multipart/form-data" method="post"> <input
-      onchange="this.form.submit()" name="file" type="file">
+    <p><em>projectr</em> is a <a href="https://www.martinfowler.com/articles/microservices.html">microservice</a> that lets you upload a graph edge list as a two column CSV file and get back a <a href="https://en.wikipedia.org/wiki/Bipartite_network_projection">weighted bipartite projection</a> of that graph as a CSV.</p>
+
+    <form id="upload" action="/" enctype="multipart/form-data" method="post">
+      <ol>
+        <li>Select an edge list CSV File: <input name="file" type="file"></li>
+        <li>Pick a column of nodes to project onto: 
+          <select name="column">
+            <option value="1">Column 1</option>
+            <option value="2">Column 2</option>
+          </select>
+        </li>
+        <li>
+          Submit your request: <input type="submit" value="Upload">
+        </li>
+      </ol>
     </form>
 
+    <p>Or if you prefer you can upload your file on the command line using <a href="https://curl.haxx.se/">curl</a>:</p>
+
+    <div id="curl">
+      % curl -F file=@/path/to/file.csv -F column=1 {{ request.url }}
+    </div>
+
   </body>
+
 </html>
