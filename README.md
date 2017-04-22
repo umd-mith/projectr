@@ -7,6 +7,8 @@ REST API call:
 
      curl -F file=@/path/to/file.csv http://projectr.example.com/ 
 
+## Install
+
 The easiest way to get started with *projectr* is with [Docker]:
 
     docker run -d -p 5000:5000 edsu/projectr
