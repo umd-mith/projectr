@@ -11,17 +11,17 @@ REST API call:
 
 The easiest way to get started with *projectr* is with [Docker]:
 
-1. docker run -d -p 5000:5000 edsu/projectr
-2. open http://localhost:5000
+    docker run -d -p 5000:5000 edsu/projectr
+    open http://localhost:5000
 
 Or if you want to run it for development:
 
-1. git clone https://github.com/umd-mith/projectr
-2. cd projectr
-3. pip install -r requirements.txt
-4. export FLASK_APP=app
-5. export FLASK_DEBUG=1
-6. flask run
+    git clone https://github.com/umd-mith/projectr
+    cd projectr
+    pip install -r requirements.txt
+    export FLASK_APP=app
+    export FLASK_DEBUG=1
+    flask run
 
 [microservice]: https://www.martinfowler.com/articles/microservices.html
 [Docker]: https://docs.docker.com/engine/installation/
